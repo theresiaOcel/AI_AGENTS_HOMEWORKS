@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-07-08T14:29:14",
+  "email": {
+    "subject": "Domluva schůzky",
+    "body": "Dobrý den, mohl by se náš tým sejít v pátek 11. července v 10:00?",
+    "from": "kollega@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T09:15:00"
+  },
+  "response": {
+    "subject": "RE: Domluva schůzky",
+    "body": "Dobrý den,\n\nomlouvám se, ale v pátek 11. července v 10:00 nemohu. Bohužel v následujících dnech nemám volný žádný jiný termín pro schůzku.\n\nDěkuji za pochopení.\n\nS pozdravem\nInteligentní assistent Terezie Ocelkové",
+    "from": "ja@example.cz",
+    "to": "kollega@firma.cz",
+    "timestampt": "2024-04-27T12:00:00+02:00"
+  }
+}
+{
+  "timestamp": "2025-07-08T14:29:26",
+  "email": {
+    "subject": "Změna času schůzky",
+    "body": "Dobrý den, měli jsme domluvenou schůzku na čtvrtek. Bohužel nastala situace, která mi brání se ve čtvrtek sejít. Místo čtvrtka navrhuji přesun schůzky na středu ve 14:00. Měla byste prosím čas?",
+    "from": "manager@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T11:40:00"
+  },
+  "response": {
+    "subject": "RE: Změna času schůzky",
+    "body": "Dobrý den,\n\nomlouvám se, ale bohužel v navržený čas schůzku naplánovat nelze a zatím se nepodařilo najít žádný jiný vhodný termín v nejbližších dnech.\n\nDěkuji za pochopení.\n\nS pozdravem\nInteligentní assistent Terezie Ocelkové",
+    "from": "ja@example.cz",
+    "to": "manager@firma.cz",
+    "timestampt": "2024-06-01T12:00:00+02:00"
+  }
+}

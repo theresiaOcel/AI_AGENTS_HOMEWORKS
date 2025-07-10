@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "Výhodná nabídka pro vás!",
+    "body": "Získejte nový telefon za 1 Kč. Nabídka platí jen dnes!",
+    "from": "promo@superdeal.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T08:30:00"
+  },
+  {
+    "subject": "Domluva schůzky",
+    "body": "Dobrý den, mohl by se náš tým sejít v pátek 11. července v 10:00?",
+    "from": "kollega@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T09:15:00"
+  },
+  {
+    "subject": "Návod k systému",
+    "body": "Dobrý den, můžete mi prosím poslat odkaz na manuál k instalaci softwaru Example?",
+    "from": "uzivatel123@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T09:20:00"
+  },
+  {
+    "subject": "Divné chování systému",
+    "body": "Ahoj, systém se včera okolo 23 hodiny choval neobvykle. Můžeš prosím prověřit, co se stalo?",
+    "from": "it@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T10:00:00"
+  },
+  {
+    "subject": "Soutěžte o iPhone",
+    "body": "Klikněte ZDE a vyhrajte iPhone 15 Pro!",
+    "from": "spam@loterie.fun",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T11:10:00"
+  },
+  {
+    "subject": "Změna času schůzky",
+    "body": "Dobrý den, měli jsme domluvenou schůzku na čtvrtek 10.7. Bohužel nastala situace, která mi brání se ve čtvrtek sejít. Místo čtvrtka navrhuji přesun schůzky na středu 9.7. ve 14:00. Měla byste prosím čas?",
+    "from": "manager@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T11:40:00"
+  },
+  {
+    "subject": "Re: Přístup do systému",
+    "body": "Ahoj, jaký je přesný postup pro získání přístupu k databázi?",
+    "from": "analytik@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T12:05:00"
+  },
+  {
+    "subject": "Osobní prosba",
+    "body": "Ahoj, mohla bys mi prosím zavolat, jakmile budeš mít chvilku?",
+    "from": "kolega@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T12:30:00"
+  }
+]

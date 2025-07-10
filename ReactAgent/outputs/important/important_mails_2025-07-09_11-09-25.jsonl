@@ -1,0 +1,3 @@
+{"timestamp": "2025-07-09T11:09:25", "email": {"subject": "Divné chování systému", "body": "Ahoj, systém se včera okolo 23 hodiny choval neobvykle. Můžeš prosím prověřit, co se stalo?", "from": "it@firma.cz", "to": "ja@example.com", "timestamp": "2025-07-07T10:00:00"}}
+{"timestamp": "2025-07-09T11:09:25", "email": {"subject": "Re: Přístup do systému", "body": "Ahoj, jaký je přesný postup pro získání přístupu k databázi?", "from": "analytik@firma.cz", "to": "ja@example.com", "timestamp": "2025-07-07T12:05:00"}}
+{"timestamp": "2025-07-09T11:09:25", "email": {"subject": "Osobní prosba", "body": "Ahoj, mohla bys mi prosím zavolat, jakmile budeš mít chvilku?", "from": "kolega@firma.cz", "to": "ja@example.com", "timestamp": "2025-07-07T12:30:00"}}

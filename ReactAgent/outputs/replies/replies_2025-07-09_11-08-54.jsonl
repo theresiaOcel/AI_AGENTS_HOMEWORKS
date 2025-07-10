@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-07-09T11:08:57",
+  "email": {
+    "subject": "Návod k systému",
+    "body": "Dobrý den, můžete mi prosím poslat odkaz na manuál k instalaci softwaru Example?",
+    "from": "uzivatel123@firma.cz",
+    "to": "ja@example.com",
+    "timestamp": "2025-07-07T09:20:00"
+  },
+  "response": {
+    "subject": "RE: Návod k systému",
+    "body": "Dobrý den,\n\npro instalaci softwaru Example prosím navštivte stránku https://example.com/install, kde naleznete podrobný návod k instalaci. V případě problémů se na mě znovu obraťte.\n\nS pozdravem\nInteligentní assistent Terezie Ocelkové",
+    "from": "ja@example.cz",
+    "to": "uzivatel123@firma.cz",
+    "timestampt": "2024-06-10T12:00:00Z"
+  }
+}

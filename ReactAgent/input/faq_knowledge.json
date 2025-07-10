@@ -1,0 +1,42 @@
+[
+  {
+    "subject": "Instalace software EXAMPLE",
+    "answer": "Pro instalaci: https://example.com/install, postupujte podle návodu. V případě problémů se na mě znovu obraťte."
+  },
+  {
+    "subject": "Zapomenuté heslo do systému",
+    "answer": "Pokud jste zapomněli heslo, přejděte na https://example.com/reset a následujte pokyny pro obnovení přístupu."
+  },
+  {
+    "subject": "Kde najdu manuál k aplikaci ABC?",
+    "answer": "Kompletní uživatelský manuál naleznete zde: https://example.com/abc-manual"
+  },
+  {
+    "subject": "Jak aktualizovat aplikaci XYZ?",
+    "answer": "Pro aktualizaci aplikace XYZ otevřete aplikaci, přejděte do Nastavení > Aktualizace a klikněte na 'Zkontrolovat aktualizace'."
+  },
+  {
+    "subject": "Problém s přihlášením do portálu",
+    "answer": "Ujistěte se, že zadáváte správné přihlašovací údaje. Pokud problém přetrvává, kontaktujte technickou podporu na support@example.com."
+  },
+  {
+    "subject": "Faktura za služby",
+    "answer": "Faktury jsou dostupné po přihlášení do zákaznické zóny na https://example.com/faktury. Pokud potřebujete pomoc, dejte nám vědět."
+  },
+  {
+    "subject": "Jak změním e-mail pro zasílání oznámení?",
+    "answer": "Změnu e-mailu provedete ve svém profilu pod záložkou 'Nastavení účtu'."
+  },
+  {
+    "subject": "Jak zrušit předplatné?",
+    "answer": "Pro zrušení předplatného přejděte do nastavení účtu a klikněte na 'Zrušit předplatné'."
+  },
+  {
+    "subject": "Nechodí mi notifikace z aplikace",
+    "answer": "Zkontrolujte prosím nastavení notifikací v zařízení i v aplikaci. Návod najdete zde: https://example.com/notifikace"
+  },
+  {
+    "subject": "Kde mohu změnit své heslo?",
+    "answer": "Heslo si můžete změnit po přihlášení v sekci 'Můj účet' > 'Změna hesla'."
+  }
+]

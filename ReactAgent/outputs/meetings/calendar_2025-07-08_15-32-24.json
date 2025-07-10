@@ -1,0 +1,8 @@
+[
+  {"date": "2025-07-08", "start_time": "09:00", "end_time": "10:30", "title": "Porada s týmem", "note": "Týdenní status meeting"},
+  {"date": "2025-07-08", "start_time": "13:00", "end_time": "14:00", "title": "Call s klientem", "note": "Prezentace návrhu"},
+  {"date": "2025-07-09", "start_time": "13:00", "end_time": "15:00", "title": "One-on-one s kolegou", "note": ""},
+  {"date": "2025-07-10", "start_time": "10:00", "end_time": "11:00", "title": "Workshop AI", "note": "Účast povinná"},
+  {"date": "2025-07-11", "start_time": "13:00", "end_time": "14:00", "title": "Retrospektiva sprintu", "note": ""},
+  {"date": "2025-07-11", "start_time": "08:00", "end_time": "09:00", "title": "Schůzka s týmem", "note": "Náhradní termín, protože požadovaný čas 11.7. v 10:00 není volný"},
+  {"date": "2025-07-09", "start_time": "08:00", "end_time": "09:00", "title": "Změna času schůzky", "note": "Navržená schůzka přesunuta na nejbližší volný čas ve středu, původní navržený čas 14:00 není dostupný."}]
