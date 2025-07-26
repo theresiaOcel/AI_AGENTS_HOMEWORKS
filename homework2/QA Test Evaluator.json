@@ -1,0 +1,424 @@
+{
+  "name": "QA Test Evaluator",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2940,
+        -240
+      ],
+      "id": "8eef245d-dd1d-4948-920d-fe68c38c3491",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"system\": {\n    \"name\": \"WebApp X\",\n    \"version\": \"2.3.1\",\n    \"testDate\": \"2025-07-10\"\n  },\n  \"tests\": [\n    {\n          \"id\": 1,\n          \"name\": \"Login test\",\n          \"description\": \"Tests login with valid credentials\",\n          \"timestamp\": \"2025-07-10T08:00:00Z\",\n          \"status\": \"passed\",\n          \"message\": \"Login successful\"\n        },\n        {\n          \"id\": 2,\n         \"name\": \"Invalid login test\",\n          \"description\": \"Tests login with invalid password\",\n          \"timestamp\": \"2025-07-10T08:01:00Z\",\n          \"status\": \"failed\",\n          \"message\": \"Unexpected error message\"\n        },\n        {\n          \"id\": 3,\n          \"name\": \"Registration test\",\n          \"description\": \"Checks if user registration works\",\n          \"timestamp\": \"2025-07-10T08:02:00Z\",\n          \"status\": \"passed\",\n          \"message\": \"User registered successfully\"\n        },\n        {\n          \"id\": 4,\n          \"name\": \"Forgotten password flow\",\n          \"description\": \"Tests reset password email\",\n          \"timestamp\": \"2025-07-10T08:03:00Z\",\n          \"status\": \"skipped\",\n          \"message\": \"Email service not available\"\n        },\n        {\n          \"id\": 5,\n          \"name\": \"Profile update test\",\n          \"description\": \"Checks if user can update profile\",\n          \"timestamp\": \"2025-07-10T08:04:00Z\",\n          \"status\": \"failed\",\n          \"message\": \"Data not saved to database\"\n        },\n        {\n          \"id\": 6,\n          \"name\": \"Search feature test\",\n          \"description\": \"Validates search returns correct results\",\n          \"timestamp\": \"2025-07-10T08:05:00Z\",\n          \"status\": \"passed\",\n          \"message\": \"Results matched expectations\"\n        },\n        {\n          \"id\": 7,\n          \"name\": \"Logout test\",\n          \"description\": \"Tests logout functionality\",\n          \"timestamp\": \"2025-07-10T08:06:00Z\",\n          \"status\": \"passed\",\n          \"message\": \"User logged out successfully\"\n        },\n        {\n          \"id\": 8,\n          \"name\": \"Mobile view test\",\n          \"description\": \"Tests responsive layout on mobile\",\n          \"timestamp\": \"2025-07-10T08:07:00Z\",\n          \"status\": \"skipped\",\n          \"message\": \"Test skipped on desktop environment\"\n        },\n        {\n          \"id\": 9,\n          \"name\": \"Payment gateway test\",\n          \"description\": \"Simulates payment with test card\",\n          \"timestamp\": \"2025-07-10T08:08:00Z\",\n          \"status\": \"failed\",\n          \"message\": \"Payment not processed correctly\"\n        },\n        {\n          \"id\": 10,\n          \"name\": \"Notification test\",\n          \"description\": \"Tests if notifications are delivered\",\n          \"timestamp\": \"2025-07-10T08:09:00Z\",\n          \"status\": \"passed\",\n          \"message\": \"All notifications delivered\"\n        }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2720,
+        -240
+      ],
+      "id": "2ad1ba25-c19f-4fe3-8563-96f45b964b49",
+      "name": "JSON INPUT"
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = items[0].json;\nconst tests = data.tests;\n\nconst passed = tests.filter(t => t.status === \"passed\").length;\nconst failed = tests.filter(t => t.status === \"failed\").length;\nconst skipped = tests.filter(t => t.status === \"skipped\").length;\n\nreturn [{\n  json: {\n    system: data.system,\n    tests,\n    summary: {\n      passed,\n      failed,\n      skipped,\n      total: tests.length\n    }\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2500,
+        -260
+      ],
+      "id": "cb6b558d-ecb8-4b04-9c87-529de0125203",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "939666bb-db11-4a69-9fde-c421cd78fdf9",
+              "leftValue": "={{ $json.summary.passed }}",
+              "rightValue": "={{ $json.summary.failed }}",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -2260,
+        -160
+      ],
+      "id": "12086ebd-15e3-428b-821a-9b3bb50c4ea5",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"result\": \"positive\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2080,
+        -260
+      ],
+      "id": "7ce8b2e0-8a01-44f5-bcc4-879d39813f74",
+      "name": "RESULT POSITIVE"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"result\": \"negative\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2060,
+        -80
+      ],
+      "id": "f3d26c9b-c467-45fe-9087-d169fa9dd9e5",
+      "name": "RESULT NEGATIVE"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Napiš formální e-mailový report o testování systému {{ $json.system.name }} verze {{ $json.system.version }}, které proběhlo dne {{ $json.system.testDate }}.\n\nShrň následující statistiky:\n- Celkem testů: {{ $json.summary.total }}\n- Prošlo: {{ $json.summary.passed }}\n- Selhalo: {{ $json.summary.failed }}\n- Přeskočeno: {{ $json.summary.skipped }}\n\nZhodnoť výsledek jako {{ $json.result }} na základě poměru prošlých a selhaných testů.\n\nPokud jsou nějaké testy přeskočené nebo selhané, uveď, že je nutné provést jejich manuální kontrolu (např. {{ $json.summary.failed + $json.summary.skipped }} testů).\n\nNa závěr uveď, že detailní výpis testů je k dispozici v přiloženém souboru.\n\nReport musí začínat \"Dobrý den\" a končit \"S pozdravem\\n\\ninteligentní asistent Terezie Ocelkové\"\n\nVygenerovaný  e-mail musí být ve formátu JSON s následující strukturou:\n{\n  \"subject\": \"...\",\n  \"body\": \"...\"\n}\n\nNic jiného jako výsledek nevracej."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1200,
+        -420
+      ],
+      "id": "fbc010ae-9a87-4e1d-9c2f-e10a3a06e4e1",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "kiJeryPxy6du7z9F",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1780,
+        -540
+      ],
+      "id": "c49d1779-ea83-497c-a794-02e2668ba620",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "const itemsIn = items;\n\nconst original = itemsIn.find(i => i.json.summary); // původní objekt\nconst result = itemsIn.find(i => i.json.result);    // přidané hodnocení\n\nif (!original || !result) {\n  throw new Error(\"Chybí data pro spojení (original/result)\");\n}\n\nreturn [{\n  json: {\n    ...original.json,\n    result: result.json.result\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1560,
+        -540
+      ],
+      "id": "85dd89e9-3c54-4cab-9ffe-77ee90922ed7",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "sendTo": "ondrej.knebl@vsb.cz",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -80,
+        -420
+      ],
+      "id": "33330ec4-8de2-4699-b2a1-0058c90a29a8",
+      "name": "Send a message",
+      "webhookId": "0f628e96-1aeb-4b25-9c6b-8b52506f4d20",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "U5b582EG2F6Czs41",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Vezmeme JSON string z OpenAI výstupu\nconst raw = $json.message.content;\n\ntry {\n  const parsed = JSON.parse(raw);\n  return [{ json: parsed }];\n} catch (err) {\n  throw new Error(\"Nepodařilo se převést odpověď z LLM na JSON. Možná chybí správný formát.\");\n}\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -840,
+        -420
+      ],
+      "id": "49ce4c0f-c9e3-4741-aa88-375ad65775cb",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fileContent = JSON.stringify($json, null, 2); // pěkně formátovaný JSON\n\nreturn [{\n  binary: {\n    data: Buffer.from(fileContent).toString('base64')\n  },\n  json: {\n    fileName: 'test-report.json'\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1340,
+        -40
+      ],
+      "id": "0c0cb24f-0a9a-4f0a-81ad-c02cc8b3868d",
+      "name": "Code1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -560,
+        -420
+      ],
+      "id": "206f0356-2c5c-47b4-90da-2cebcf355291",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const message = items.find(i => i.json.subject && i.json.body);\nconst attachmentJson = {\n  ...message.json\n};\n\nconst buffer = Buffer.from(JSON.stringify(attachmentJson, null, 2), 'utf8');\n\nreturn [{\n  json: {\n    subject: message.json.subject,\n    body: message.json.body,\n    fileName: 'test-report.json'\n  },\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'application/json',\n      fileName: 'test-report.json'\n    }\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        -420
+      ],
+      "id": "d649c957-ec48-4db6-b4a3-03121ca0b4c0",
+      "name": "Code2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "JSON INPUT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSON INPUT": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "RESULT POSITIVE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RESULT NEGATIVE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RESULT NEGATIVE": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "RESULT POSITIVE": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        []
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b77b89e4-2a96-4bdc-8bff-35ea33746cad",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4d1c23f90522bd699ea12549803f451bb87d5740f31e5578fd7ba45433031aa6"
+  },
+  "id": "ZlceLIIbPKPTe6SE",
+  "tags": []
+}
