@@ -1,0 +1,52 @@
+[
+  {
+    "question_keywords": ["kdy", "termín", "deadline", "dodání"],
+    "context": "Dotaz na termín dokončení projektu.",
+    "reply_context": "Termín odevzdání závisí na rozsahu projektu. Vysvětli odhadovanou dobu vývoje a případné závislosti."
+  },
+  {
+    "question_keywords": ["chyba", "nefunguje", "bug", "error"],
+    "context": "Hlášení chyby v aplikaci.",
+    "reply_context": "Poděkuj za nahlášení a požádej o bližší informace (např. kroky k reprodukci, screenshoty)."
+  },
+  {
+    "question_keywords": ["nasazení", "deployment", "release", "go-live"],
+    "context": "Dotaz na termín nebo průběh nasazení nové verze.",
+    "reply_context": "Informuj o plánu nasazení, případných výpadcích nebo regresních testech."
+  },
+  {
+    "question_keywords": ["verze", "update", "nová funkcionalita"],
+    "context": "Zákazník se ptá na dostupnost nové verze aplikace.",
+    "reply_context": "Popiš, co nová verze obsahuje, kdy bude dostupná a jak bude probíhat aktualizace."
+  },
+  {
+    "question_keywords": ["dokumentace", "návod", "manual"],
+    "context": "Žádost o technickou dokumentaci.",
+    "reply_context": "Pošli odkaz na aktuální dokumentaci nebo přímo připoj PDF/manuál."
+  },
+  {
+    "question_keywords": ["API", "integrace", "endpoints", "swagger"],
+    "context": "Dotaz na API specifikace nebo integraci.",
+    "reply_context": "Odpověz s odkazem na API dokumentaci a nabídni technickou podporu při integraci."
+  },
+  {
+    "question_keywords": ["cena", "license", "pricing"],
+    "context": "Dotaz na licencování nebo ceny softwaru.",
+    "reply_context": "Představ cenové modely nebo odkaž na obchodní oddělení."
+  },
+  {
+    "question_keywords": ["přístup", "login", "registrace", "heslo"],
+    "context": "Problémy s přihlášením nebo žádost o přístup.",
+    "reply_context": "Navrhni reset hesla, ověření účtu nebo přidání práv uživatele."
+  },
+  {
+    "question_keywords": ["zabezpečení", "GDPR", "data", "soukromí"],
+    "context": "Dotaz na ochranu osobních údajů a bezpečnost.",
+    "reply_context": "Uveď, že systém je v souladu s GDPR, jak jsou data šifrována a kde jsou uchovávána."
+  },
+  {
+    "question_keywords": ["kontakt", "podpora", "support"],
+    "context": "Kdo je kontaktní osoba pro technickou podporu.",
+    "reply_context": "Nabídni kontaktní email/telefon, SLA časy a možnosti podpory."
+  }
+]

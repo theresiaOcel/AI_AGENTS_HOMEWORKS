@@ -1,0 +1,62 @@
+[
+    {
+        "email_id": "mail001",
+        "from": "jan.novak@gmail.com",
+        "subject": "Schůzka ohledně projektu X",
+        "body": "Dobrý den, mohla bych Vás požádat o online schůzku 28.8.2025 v 9:00? Potřebovala bych probrat další kroky v projektu."
+    },
+    {
+        "email_id": "mail002",
+        "from": "terezie.ocelkova@gmail.com",
+        "subject": "Návrh schůzky",
+        "body": "Zdravím, hodil by se Vám termín 12.8.2025 v 14:30 na rychlou konzultaci? Můžeme to udělat online."
+    },
+    {
+        "email_id": "mail003",
+        "from": "jana.nova@gmail.com",
+        "subject": "Setkání příští týden",
+        "body": "Dobrý den, ráda bych se osobně setkala příští týden ve čtvrtek v 10:00, například v naší kanceláři v Brně."
+    },
+    {
+        "email_id": "mail004",
+        "from": "newsletter@megaakce.cz",
+        "subject": "💥 Telefony za 1 Kč jen dnes!",
+        "body": "Kupte si nový iPhone za 1 Kč! Klikněte na odkaz a získejte výhodu. Nabídka platí do půlnoci."
+    },
+    {
+        "email_id": "mail005",
+        "from": "promo@rychlepujcky.cz",
+        "subject": "Vaše půjčka byla schválena!",
+        "body": "Získejte až 300 000 Kč ihned na účet bez dokládání příjmu. Stačí kliknout!"
+    },
+    {
+        "email_id": "mail006",
+        "from": "bonus@onlinesazeni.win",
+        "subject": "Získejte 500 Kč zdarma na sázení",
+        "body": "Registrujte se ještě dnes a získejte 500 Kč bez vkladu."
+    },
+    {
+        "email_id": "mail007",
+        "from": "ceo@partnerfirma.cz",
+        "subject": "Re: Podpis smlouvy",
+        "body": "Ahoj, můžeš prosím potvrdit, že jsi odeslala návrh smlouvy ke schválení? Rádi bychom to uzavřeli ještě tento týden."
+    },
+    {
+        "email_id": "mail008",
+        "from": "itadmin@mojefirma.cz",
+        "subject": "Výpadek v neděli",
+        "body": "Dobrý den, v neděli od 22:00 do 23:30 proběhne údržba systému. Očekávejte krátký výpadek."
+    },
+    {
+        "email_id": "mail009",
+        "from": "zakaznik@firma.cz",
+        "subject": "Přístup do systému",
+        "body": "Dobrý den, nemohu se přihlásit do aplikace. Můžete prosím zkontrolovat, zda je můj účet aktivní?"
+    },
+    {
+        "email_id": "mail010",
+        "from": "jiri.novak@firma.cz",
+        "subject": "Kdy bude další release?",
+        "body": "Zdravím, chtěl bych se zeptat, kdy plánujete další verzi aplikace s novými funkcemi."
+    }
+]
